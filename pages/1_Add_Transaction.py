@@ -2,6 +2,7 @@ import streamlit as st
 import datetime
 from main import get_cws_list, connect_to_mysql
 
+@st.cache_data
 def get_farmer_list():
     connection = connect_to_mysql()
     cursor = connection.cursor()

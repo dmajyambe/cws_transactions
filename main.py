@@ -1,7 +1,7 @@
 import streamlit as st
 import mysql.connector
 
-
+@st.cache_resource
 def connect_to_mysql():
     return mysql.connector.connect(
         host="sql11.freemysqlhosting.net",
