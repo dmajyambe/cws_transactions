@@ -1,15 +1,7 @@
 import streamlit as st
 import mysql.connector
 import pandas as pd
-
-def connect_to_mysql():
-    return mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="",
-        database="mydb"
-    )
-
+from main import connect_to_mysql
 
 def upload_cws_data():
     uploaded_file = st.file_uploader("Upload file (CSV or Excel)", type=["csv", "xlsx", "xls"])
@@ -51,4 +43,5 @@ def upload_cws_data():
 
         st.success(f"Successfully uploaded user data from the file.")
 
+st.title("Upload CWS Data")
 upload_cws_data()
