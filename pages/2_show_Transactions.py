@@ -4,6 +4,7 @@ from main import connect_to_mysql
 
 selected_date = st.date_input("Select Date")
 
+@st.cache_data
 def get_transactions_by_date(selected_date):
     connection = connect_to_mysql()
     cursor = connection.cursor()
