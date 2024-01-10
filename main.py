@@ -4,10 +4,11 @@ import mysql.connector
 
 def connect_to_mysql():
     return mysql.connector.connect(
-        host="192.168.82.27",
-        user="root",
-        password="",
-        database="mydb"
+        host="sql11.freemysqlhosting.net",
+        user="sql11675963",
+        password="zw5PVRtTgx",
+        database="sql11675963",
+        port=3306
     )
 
 def create_cws_table():
